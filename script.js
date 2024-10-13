@@ -68,10 +68,9 @@ function updateAttempts() {
 
 function flipCard() {
     if (lockBoard || !gameStarted) return; 
-    if (this === firstCard) return;
+    if (this === firstCard) return; 
 
     this.classList.add('flipped');
-    const front = this.querySelector('.front');
 
     if (!firstCard) {
         firstCard = this;
@@ -79,7 +78,7 @@ function flipCard() {
     }
 
     secondCard = this;
-    lockBoard = true;
+    lockBoard = true; 
 
     checkForMatch();
 }
