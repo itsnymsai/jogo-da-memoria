@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="/jogo-da-memoria/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Memória</h1>
+        <div id="timer" style="font-size: 24px; margin-bottom: 20px;">Tempo: 0s</div> 
+        <div id="attempts-counter" style="font-size: 24px; margin-top: 20px;">Tentativas: 0</div>
+        <div id="game-board" class="game-board"></div>
+        <button id="restart">Reiniciar Jogo</button>
+    </div>
+
+    <div id="intro-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-intro" class="close">&times;</span></br>
+            <h2>Bem-vindo ao Jogo da Memória!</h2>
+            <p>Tente encontrar os pares antes das tentativas acabarem!</p>
+            <p>Boa sorte! ☘️</p></br>
+            <button id="start-game">Iniciar Jogo</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span></br>
+            <h2>🎉 Você Ganhou! 🎉</h2>
+            <p><strong>Tentativas:</strong> <span id="attempts"></span></p>
+            <p><strong>Tempo:</strong> <span id="time"></span></p></br>
+            <button id="restart-from-win">Reiniciar Jogo</button>
+        </div>
+    </div>    
+
+    <div id="lose-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-lose" class="close">&times;</span></br>
+            <h2>❌ Você Perdeu! ❌</h2>
+            <p id="remaining-cards"></p> </br>
+            <button id="restart-from-lose">Tentar Novamente</button>
+        </div>
+    </div>
+
+    <script src="/jogo-da-memoria/script.js"></script>
+</body>
+</html>
